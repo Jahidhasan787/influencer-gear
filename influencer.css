@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* common styles */
+.primary-p {
+    font-size: 1em;
+    font-weight: 500;
+    color: #3A3A3A;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.secondary-p {
+    font-size: 1em;
+    font-weight: 600;
+    color: rgba(108, 108, 108, 1);
+}
+
+.poppins-regular,
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn {
+    height: 40px;
+    background-color: #E02C6D;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+/* nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    align-items: center;
+}
+
+.nav-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* hero section styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-image {
+    background-image: url(images/Circle\ design.svg);
+}
+
+.hero-image img {
+    padding-top: 40px;
+    width: 100%;
+}
+
+/* sponsors section styles */
+.sponsor-images {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 70px 0;
+    padding: 35px 0;
+}
+
+.sponsor-images img {
+    width: 10%;
+}
+
+/* responsivie styles */
+@media screen and (max-width:576px) {
+    .container{
+        margin: 0 10px;
+    }
+    nav ul,
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .sponsor-images{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ; 
+        gap: 30px;
+        text-align: center;
+    }
+    .sponsor-images img {
+        width: 80%;
+    }
+}
