@@ -23,6 +23,8 @@
     font-size: 1em;
     font-weight: 600;
     color: rgba(108, 108, 108, 1);
+    max-width: 195px;
+    width: 100%;
 }
 
 .poppins-regular,
@@ -92,10 +94,11 @@ nav ul li a {
 
 .hero-image {
     background-image: url(images/Circle\ design.svg);
+    background-size: 95%;
+    background-repeat: no-repeat;
 }
 
 .hero-image img {
-    padding-top: 40px;
     width: 100%;
 }
 
@@ -106,17 +109,122 @@ nav ul li a {
     gap: 10px;
     margin: 70px 0;
     padding: 35px 0;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, rgba(192, 204, 218, 0) 0%, rgba(192, 204, 218, 0.6) 50.378%, rgba(192, 204, 218, 0.0) 100%);
+    border-image-slice: 1;
+
 }
 
 .sponsor-images img {
     width: 10%;
 }
 
-/* responsivie styles */
+/* card section styles */
+.collection {
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.collection h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.primary-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.collection-card {
+    padding: 15px;
+    max-width: 330px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+
+.collection-card h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.collection-card img {
+    width: 100%;
+}
+
+.icons i {
+    color: rgb(248, 88, 30);
+}
+
+.see-more {
+    color: #E02C6D;
+    position: absolute;
+    right: 180px;
+    /* margin-top: 30px; */
+}
+
+.see-more button {
+    border: none;
+    color: #E02C6D;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* future products styles */
+.feature-product {
+    display: flex;
+    gap: 90px;
+    margin: 100px auto;
+    align-items: center;
+
+}
+
+.feature-product-content h1 {
+    margin-bottom: 20px;
+}
+
+.feature-product-image img {
+    width: 100%;
+}
+
+.feature-product-content .btn {
+    border-radius: 0;
+}
+
+/* footer section styles */
+footer{
+    background-color: rgba(10, 8, 38, 1);
+}
+.footer-content{
+    max-width: 370px;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+}
+
+.footer-content p{
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.footer-icons i{
+    margin: 10px;
+}
+
+.footer-icons a{
+    color: white;
+}
+
+/* responsive styles */
 @media screen and (max-width:576px) {
-    .container{
+    .container {
         margin: 0 10px;
     }
+
     nav ul,
     nav {
         flex-direction: column;
@@ -126,18 +234,24 @@ nav ul li a {
         gap: 10px;
     }
 
-    .hero {
+    .hero,
+    .feature-product {
         flex-direction: column-reverse;
         text-align: center;
     }
 
-    .sponsor-images{
-        display: grid;
-        grid-template-columns: repeat(4,1fr) ; 
+    .sponsor-images {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
-        text-align: center;
+
     }
+
     .sponsor-images img {
-        width: 80%;
+        width: 15%;
+    }
+
+    .see-more {
+        right: 15px;
     }
 }
